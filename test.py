@@ -2,6 +2,7 @@ import numpy as np
 import sys
 
 from functions.math.orthonormal import orthonormal
+from functions.math.orthonormal import orth2
 
 v1 = np.array([1,2,3])
 v2 = np.array([0,0,1])
@@ -33,3 +34,12 @@ y = np.cross(k,x)
 print(k,x,y)
 
 print(orthonormal([k,x,y]))
+
+print(orth2([k,x,y,v1]))
+
+v1 = np.array([0, 0 , 1])
+v2 = np.array([0, 0 , 2])
+v3 = np.array([0, 1 , 0])
+
+print(orth2([v1,v2,v3]))
+
